@@ -5,7 +5,7 @@ version = '0.1'
 
 setup(name='usin.skeletons',
       version=version,
-      description="Skeletons for projects at Usinasite",
+      description="Skeletons used at Usinasite",
       long_description="""\
 """,
       classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
