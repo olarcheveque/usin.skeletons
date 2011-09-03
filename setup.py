@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 import sys, os
 
 version = '0.1'
-
-setup(name='usin.skeletons',
+name = 'usin.skeletons'
+setup(name=name,
       version=version,
       description="Skeletons used at Usinasite",
       long_description="""\
@@ -12,7 +12,7 @@ setup(name='usin.skeletons',
       keywords='skeleton paster django usinasite',
       author='Olivier Larchev\xc3\xaaque',
       author_email='olivier.larcheveque@gmail.com',
-      url='',
+      url='http://pypi.usinasite.com/%s' % name,
       license='GPL',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
