@@ -1,0 +1,28 @@
+#encoding UTF-8
+
+[buildout]
+newest = false
+parts = django
+versions = versions
+
+#find-links = 
+
+eggs =
+    django
+    south
+    django-admin-tools
+    django-sentry
+    django-staticfiles
+
+[versions]
+django = 1.2.5
+south = 0.7
+django-admin-tools = 0.4.0
+django-staticfiles = 1.1.2
+
+[django]  
+recipe = djangorecipe
+wsgi=true  
+settings=production 
+extra-paths = project 
+eggs = \${buildout:eggs}
