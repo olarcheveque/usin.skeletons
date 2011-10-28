@@ -1,6 +1,15 @@
 usin.skeletons
 ==============
 
+02/09/2011 - 0.2dev
+-------------------
+
+* Sentry client -> Raven
+
+* SSL routing (for webfaction)
+
+* Django-vu client
+
 02/09/2011 - 0.1dev
 -------------------
 

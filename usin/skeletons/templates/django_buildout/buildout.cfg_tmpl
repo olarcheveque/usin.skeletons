@@ -5,20 +5,22 @@ newest = false
 parts = django
 versions = versions
 
-#find-links = 
+find-links = http://pypi.usinasite.com/django-vu/
 
 eggs =
     django
     south
     django-admin-tools
-    django-sentry
+    raven
     django-staticfiles
+    django-vu
 
 [versions]
 django = 1.2.5
-south = 0.7
+south = 0.7.3
 django-admin-tools = 0.4.0
 django-staticfiles = 1.1.2
+raven = 0.6.1
 
 [django]  
 recipe = djangorecipe

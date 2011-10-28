@@ -70,6 +70,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfResponseMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'raven.contrib.django.middleware.Sentry404CatchMiddleware',
 )
 
 ROOT_URLCONF = 'project.urls'
@@ -88,7 +89,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 INSTALLED_APPS = (
-    'sentry.client',
+    'raven.contrib.django',
     'admin_tools',
     'admin_tools.theming',
     'admin_tools.menu',
@@ -101,11 +102,16 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'south',
     'staticfiles',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'django_vu.client',
 )
 
 SOUTH_TESTS_MIGRATE = False
 ADMIN_TOOLS_INDEX_DASHBOARD = 'project.dashboard.CustomIndexDashboard'
 
-SENTRY_REMOTE_URL = 'http://sentry.usinasite.com/store/'
+SENTRY_SERVERS = ['http://sentry.usinasite.com/store/', ]
+
+SECURE_REQUIRED_PATHS = (
+    '/admin/',
+    '/accounts/',
+    '/login/',
+)

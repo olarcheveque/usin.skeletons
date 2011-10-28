@@ -1,5 +1,3 @@
-SECRET_KEY = ''
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
@@ -11,4 +9,9 @@ DATABASES = {
     }
 }
 
+SECRET_KEY = ''
+
+VU_KEY = ''
+
+SENTRY_SITE = ''
 SENTRY_KEY = ''

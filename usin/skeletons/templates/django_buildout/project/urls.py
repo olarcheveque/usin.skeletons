@@ -6,9 +6,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-   url(r'^admin_tools/', include('admin_tools.urls')),
-   (r'^admin/', include(admin.site.urls)),
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin_tools/', include('admin_tools.urls')),
+    (r'^admin/', include(admin.site.urls)),
+    (r'^vu/', include('django_vu.client.urls')),
 )
 
 if settings.DEBUG:
