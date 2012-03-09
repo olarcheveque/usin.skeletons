@@ -1,0 +1,30 @@
+#!${buildout:executable}
+# vim: set filetype=python:
+
+# -*- coding: utf-8 -*-
+
+import sys
+import os
+import pkg_resources
+
+buildout_directory = '${buildout:directory}'
+eggs_directory = '${buildout:eggs-directory}'
+parts_directory = '${buildout:parts-directory}'
+develop_directory = '${buildout:develop-eggs-directory}'
+directories = (
+        eggs_directory,
+        parts_directory,
+        develop_directory,
+        )
+
+paths = [buildout_directory,
+        os.path.join(buildout_directory, '${project}'),
+        ]
+for d in directories:
+    paths += [os.path.join(d, pkg) for pkg in os.listdir(d)]
+
+sys.path[0:0] = paths
+
+#http://packages.python.org/distribute/pkg_resources.html#namespace-package-support
+for path in paths:
+    pkg_resources.fixup_namespace_packages(path)
