@@ -1,8 +1,0 @@
-[buildout]
-extends=buildout.cfg
-
-[django]
-wsgi=false
-settings=development
-eggs = \${buildout:eggs}
-    django-debug-toolbar
