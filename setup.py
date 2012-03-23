@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '1.0'
+version = '1.2'
 name = 'usin.skeletons'
 setup(name=name,
       version=version,
@@ -13,7 +13,7 @@ setup(name=name,
       author_email='olivier.larcheveque@gmail.com',
       url='http://pypi.usinasite.com/%s' % name,
       license='GPL',
-      namespace_packages = ['usin', 'usin.skeletons', ],
+      namespace_packages = ['usin', ],
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
       zip_safe=False,

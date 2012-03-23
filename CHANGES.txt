@@ -1,0 +1,16 @@
+1.2
+===
+
+* Fix path for wsgi handler
+
+* Comment STATIC_DIR
+
+1.1
+===
+
+* Fix namespace package
+
+1.0
+===
+
+* Django 1.3 buildout skeleton

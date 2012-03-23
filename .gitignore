@@ -19,3 +19,4 @@ parts
 tmp
 www_static
 *egg-info
+dist
