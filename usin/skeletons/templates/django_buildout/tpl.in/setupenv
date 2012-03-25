@@ -20,8 +20,15 @@ directories = (
 paths = [buildout_directory,
         os.path.join(buildout_directory, '${project}'),
         ]
+
 for d in directories:
-    paths += [os.path.join(d, pkg) for pkg in os.listdir(d)]
+    for pkg in os.listdir(d):
+        pkg = os.path.join(d, pkg)
+        if pkg.endswith('link'):
+            paths.append(open(pkg).readline().strip('\n'))
+        else:
+            paths.append(pkg)
+    
 
 sys.path[0:0] = paths
 
